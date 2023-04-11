@@ -1,21 +1,19 @@
 import React from 'react';
 
 const VideoCard = ( {info}) => {
-  
- 
-    const{snippet,statistics    }=info
-    const{channelTitle,
-        title ,thumbnails   }=snippet
+
+    const{snippet,statistics }=info
+    const{channelTitle,title ,thumbnails}=snippet
   return (
-    <div>
-      <img alt='video' src={thumbnails.high.url}/>
-      <ul>
-      <li>{title}</li>
+    <div className='p-2 m-2 w-72 shadow-lg'>
+      <img className='rounded-lg mb-2' alt='video' src={thumbnails.high.url}/>
+      <ul >
+      <li className='font-bold'>{title}</li>
       <li>{channelTitle}</li>
-      <li>{statistics.viewCount}</li>
+      <li>{statistics.viewCount} views</li>
       </ul>
       
-      <h1>hey</h1>
+      
     </div>
   );
 }
